@@ -9,40 +9,47 @@
     <title>TIC TAC TOE GAME </title>
 </head>
 <body>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-}
-
-nav{
-    background-color: rgba(37, 9, 37, 0.612);
-    color: rgb(16, 14, 14);
-    height: 150px;
-    font-size: 87px;
-    display: flex;
-    margin-top: -10px;
-    align-items: center;
-    padding: 0 12px;
-    font-family: 'Roboto', sans-serif;
-    text-decoration: underline;
-}
-
-nav ul{
-    list-style-type: none;
-}
-ul{text-decoration: underline;
-
-margin-bottom: 0px;}
-
-.gameContainer{ 
-    display: flex;
-    justify-content: center;
-    margin-top:-20px;
-}
-
-.container{
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f1f1f1;
+    }
+  
+    nav {
+      background-color: rgba(37, 9, 37, 0.612);
+      color: rgb(16, 14, 14);
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 2rem;
+    }
+  
+    .gameContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .container{
     display: grid;
     grid-template-rows: repeat(3, 10vw);
     grid-template-columns: repeat(3, 10vw);
@@ -58,93 +65,64 @@ margin-bottom: 0px;}
     justify-content: center;
     align-items: center;
   background-color: rgb(86, 82, 82);}
-
-.box:hover{
-    background-color: rgb(242, 234, 250);
-}
-
-.info {
-    font-size: 22px;
-    
-}
-
-.gameInfo{
-    padding: 0 10px;
-    font-family: 'Baloo Bhaina 2', cursive;
-    margin-top: 10px;
-}
-
-.gameInfo h1{
-    font-size: 2.5rem;
-}
-
-.imgbox img{
-    width: 0;
-    transition: width 1s ease-in-out;
-    margin-left: 150px;
-    
-}
-
-.br-0{
-    border-right: 0;
-}
-
-.bl-0{
-    border-left: 0;
-}
-
-.bt-0{
-    border-top: 0;
-}
-
-.bb-0{
-    border-bottom: 0;
-}
-
-#reset {
-    margin: 0 23px;
-    padding: 1px 18px;
-    background: #ffffff;
-    border-radius: 6px;
-    cursor: pointer;
-    font-family: 'Baloo Bhaina 2';
-    font-size: 15px;
-    font-weight: bolder;
-}
-
-.line{
-    background-color: rgb(247, 244, 244);
-    height: 3px;
-    width: 0;
-    position: absolute;
-    background-color: #911d91;
-    transition: width 1s ease-in-out;
-}
-.flex{
-  -ms-flex-align: center;
-  padding-left: 510px;
-  padding-top: 25px;
   
-}
-
-@media screen and (max-width: 1000px)
-{
-    .gameContainer{
-        flex-wrap: wrap;
+    .box:hover {
+      background-color: rgb(242, 234, 250);
     }
-    .gameInfo{
-        margin-top: 34px;
+  
+    .info {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
-    .gameInfo h1{
-        font-size: 1.5rem;
+  
+    .gameInfo {
+      text-align: center;
     }
-    .container { 
-        grid-template-rows: repeat(3, 20vw);
-        grid-template-columns: repeat(3, 20vw);
+  
+    .gameInfo h1 {
+      font-family: 'Baloo Bhaina 2', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
-    
-}
-    </style>
+  
+    .imgbox {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  
+    .imgbox img {
+      width: 300px;
+      transition: width 1s ease-in-out;
+    }
+  
+    #reset {
+      margin: 0 1rem;
+      padding: 10px 18px;
+      background: #ffffff;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Baloo Bhaina 2';
+      font-size: 1.2rem;
+      font-weight: bolder;
+    }
+  
+    .line {
+      background-color: #911d91;
+      height: 3px;
+      width: 0;
+      position: absolute;
+      transition: width 1s ease-in-out;
+    }
+  
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 80vw;
+        height: 80vw;
+      }
+    }
+  </style>
+  
+  
     <nav>
       <ul>
         <li>TicTacToe</li>
